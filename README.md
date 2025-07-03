@@ -1,5 +1,5 @@
 # WebAPP-CP422021-G14project
-a WebApp project for CP422021 Class 
+A WebApp project for CP422021 Class 
 
 Present to Mr.Comdet Phueadphut
 
