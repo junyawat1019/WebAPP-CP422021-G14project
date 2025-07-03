@@ -1,7 +1,9 @@
 # WebAPP-CP422021-G14project
-a WebApp project for Cp422021 class
-# Member
+a WebApp project for CP422021 Class 
 
+Present to Mr.Comdet Phueadphut
+
+# Member
 กัญญาณัฐ รัตนประทุม	673380536-3	Tester
 
 กชามาส รอบวนานิยม	673380535-5	Frontend Dev
