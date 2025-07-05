@@ -17,3 +17,6 @@ Present to Mr.Comdet Phueadphut
 พลอยไพริน จันทะคุณ	673380554-1	Backend Dev
 
 จรรยวรรธน์ หัสคุณ	673380537-1	PM & Fullstack Dev
+
+# About the project
+Idk
