@@ -1,9 +1,7 @@
 # WebAPP-CP422021-G14project
 A WebApp project of Group14 for CP422021 Class 
-# Vue 3 + Vite
 
 Present to Mr.Comdet Phueadphut
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
 
 # Member
 กัญญาณัฐ รัตนประทุม	673380536-3	Tester
