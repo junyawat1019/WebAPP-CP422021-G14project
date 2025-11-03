@@ -72,15 +72,19 @@ const registerUser = async () => {
       displayName: displayName.value,
       email: email.value,
       gender: gender.value,
-      birthday: birthday.value,
+      birthday: birthday.value ? new Date(birthday.value) : null,
       createdAt: new Date(),
       photoURL: "",
       aboutMe: "",
       phoneNumber: "",
+      favorites: [],
+      reviewsCount: 0,
+      followersCount: 0,
+      followingCount: 0,
     });
 
     alert("สมัครสมาชิกสำเร็จ!");
-    router.push("/"); // เด้งไปหน้า Home
+    router.push("/");
   } catch (error) {
     alert("เกิดข้อผิดพลาด: " + error.message);
   } finally {
@@ -99,15 +103,19 @@ const registerWithGoogle = async () => {
         displayName: result.user.displayName || result.user.email.split("@")[0],
         email: result.user.email,
         gender: "",
-        birthday: "",
+        birthday: null,
         createdAt: new Date(),
         photoURL: result.user.photoURL || "",
         aboutMe: "",
         phoneNumber: "",
+        favorites: [],
+        reviewsCount: 0,
+        followersCount: 0,
+        followingCount: 0,
       });
     }
 
-    router.push("/"); // เด้งไปหน้า Home
+    router.push("/");
   } catch (error) {
     alert("เกิดข้อผิดพลาด: " + error.message);
   } finally {
@@ -115,7 +123,6 @@ const registerWithGoogle = async () => {
   }
 };
 </script>
-
 
 <style scoped>
 .auth-container {
@@ -126,17 +133,20 @@ const registerWithGoogle = async () => {
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
+
 form {
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
+
 input {
   padding: 12px;
   border-radius: 6px;
   border: 1px solid #ccc;
   font-size: 14px;
 }
+
 button {
   padding: 12px;
   border: none;
@@ -146,10 +156,12 @@ button {
   cursor: pointer;
   font-weight: bold;
 }
+
 button:disabled {
   background: #99d6f2;
   cursor: not-allowed;
 }
+
 .divider {
   text-align: center;
   margin: 16px 0;

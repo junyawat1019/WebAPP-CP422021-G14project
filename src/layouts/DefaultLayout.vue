@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Navbar />
+    <Navbar @updateLocation="$emit('updateLocation', $event)" />
     <main>
       <slot />
     </main>

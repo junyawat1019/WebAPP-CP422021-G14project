@@ -5,6 +5,7 @@ import Register from "@/views/Register.vue";
 import Place from "@/views/Place.vue";
 import PlaceDetail from "@/views/PlaceDetail.vue";
 import AddPlace from "@/views/AddPlace.vue";
+import EditPlace from "@/views/EditPlace.vue";
 import Profile from "@/views/Profile.vue";
 import ProfileSettings from "@/views/ProfileSettings.vue";
 
@@ -14,7 +15,13 @@ const routes = [
   { path: "/register", name: "Register", component: Register },
   { path: "/places", name: "Place", component: Place },
   { path: "/place/:id", name: "PlaceDetail", component: PlaceDetail },
+  {
+    path: "/place/:id/photo",
+    name: "PhotoView",
+    component: () => import("@/views/PhotoView.vue"),
+  },
   { path: "/add-place", name: "AddPlace", component: AddPlace },
+  { path: "/edit-place/:id", name: "EditPlace", component: EditPlace },
   {
     path: "/me",
     name: "MyProfile",
@@ -22,17 +29,18 @@ const routes = [
     props: { isMe: true },
   },
   {
-    path: "/:username",
+    path: "/profile/:userId",
     name: "UserProfile",
     component: Profile,
-    props: (route) => ({ username: route.params.username }),
+    props: true,
   },
+
   {
     path: "/profile/settings",
     name: "ProfileSettings",
     component: ProfileSettings,
-    props: true,
   },
+
   {
     path: "/reset-password",
     name: "ResetPassword",

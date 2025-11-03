@@ -44,6 +44,7 @@ const resetPassword = async () => {
     loading.value = false;
   }
 };
+
 </script>
 
 <style scoped>
